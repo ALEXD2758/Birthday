@@ -6,11 +6,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.index-background {
-    background: url('backgroundindexpage.png') no-repeat center center fixed;
-    background-size: cover;
+    background-size: cover; /* Make sure background covers the whole screen */
+    background-position: center;
 }
 
 .home-background {
@@ -18,34 +15,65 @@
     background-size: cover;
 }
 
-.choice-background {
-    background: url('skyblue.png') no-repeat center center fixed;
-    background-size: cover;
-}
-
-.login-box, .centered-box, .choice-box {
+.centered-box {
+    width: 80%;
+    max-width: 600px;
+    background: #ffffff;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    background: #ffffff; /* White background for a clean look */
     text-align: center;
     position: relative;
 }
 
-.login-box {
-    width: 350px;
+.photo-frame {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    background: #f0f0f0;
 }
 
-    .login-box input, .login-box button {
-        display: block;
-        width: 90%;
-        margin: 10px auto;
-        padding: 12px;
-        border: 1px solid #ccc;
+    .photo-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         border-radius: 10px;
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-        font-size: 16px;
     }
+
+.puzzle-part {
+    position: absolute;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.part1 {
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 60px;
+}
+
+.part2 {
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 60px;
+}
+
+.part3 {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 60px;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
 
 button {
     background-color: #28a745;
@@ -60,56 +88,3 @@ button {
     button:hover {
         background-color: #218838;
     }
-
-.centered-box {
-    width: 80%;
-}
-
-.choice-box {
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 15px;
-    cursor: pointer;
-    display: inline-block;
-    width: 200px;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    color: white;
-    font-weight: bold;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease-in-out;
-}
-
-    .choice-box:hover {
-        transform: scale(1.05);
-    }
-
-.confetti {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 9999;
-}
-
-.confetti-piece {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #ffcc00;
-    opacity: 0.7;
-    animation: confetti-fall 4s linear infinite;
-}
-
-@keyframes confetti-fall {
-    0% {
-        transform: translateY(-10vh);
-    }
-
-    100% {
-        transform: translateY(100vh);
-    }
-}
