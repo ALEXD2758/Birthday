@@ -55,9 +55,10 @@
 .puzzle-part {
     position: absolute;
     background-color: #333; /* Dark grey with full opacity */
-    border-radius: 10px;
+    border: 3px solid white; /* White border */
     z-index: 1;
     transition: background-color 0.3s ease; /* Smooth transition for reveal effect */
+    box-sizing: border-box; /* Include border in the element's total width and height */
 }
 
 .part1 {
@@ -81,6 +82,7 @@
     width: 300px;
     height: 150px;
 }
+
 
 #question-container {
     margin-bottom: 20px;
