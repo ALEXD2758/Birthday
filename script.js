@@ -19,14 +19,59 @@ function selectChoice(choice) {
 }
 
 function startConfetti() {
-    const confettiContainer = document.querySelector('.confetti');
-    confettiContainer.style.display = 'block';
-    for (let i = 0; i < 100; i++) {
-        const confettiPiece = document.createElement('div');
-        confettiPiece.className = 'confetti-piece';
-        confettiPiece.style.left = Math.random() * 100 + 'vw';
-        confettiPiece.style.backgroundColor = ['#ff0000', '#ffffff', '#00ff00'][Math.floor(Math.random() * 3)];
-        confettiPiece.style.animationDelay = Math.random() * 5 + 's';
-        confettiContainer.appendChild(confettiPiece);
-    }
+    // Define confetti parameters
+    const duration = 5 * 1000; // 5 seconds
+    const animationEnd = Date.now() + duration;
+
+    // Confetti from the left side
+    const intervalLeft = setInterval(() => {
+        if (Date.now() > animationEnd) {
+            clearInterval(intervalLeft);
+            return;
+        }
+        confetti({
+            angle: 90,
+            spread: 60,
+            origin: { x: 0 }
+        });
+    }, 200);
+
+    // Confetti from the right side
+    const intervalRight = setInterval(() => {
+        if (Date.now() > animationEnd) {
+            clearInterval(intervalRight);
+            return;
+        }
+        confetti({
+            angle: 270,
+            spread: 60,
+            origin: { x: 1 }
+        });
+    }, 200);
+
+    // Confetti from the top side
+    const intervalTop = setInterval(() => {
+        if (Date.now() > animationEnd) {
+            clearInterval(intervalTop);
+            return;
+        }
+        confetti({
+            angle: 180,
+            spread: 60,
+            origin: { y: 0 }
+        });
+    }, 200);
+
+    // Confetti from the bottom side
+    const intervalBottom = setInterval(() => {
+        if (Date.now() > animationEnd) {
+            clearInterval(intervalBottom);
+            return;
+        }
+        confetti({
+            angle: 0,
+            spread: 60,
+            origin: { y: 1 }
+        });
+    }, 200);
 }
