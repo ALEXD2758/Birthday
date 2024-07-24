@@ -25,10 +25,8 @@ function startConfetti() {
         const confettiPiece = document.createElement('div');
         confettiPiece.className = 'confetti-piece';
         confettiPiece.style.left = Math.random() * 100 + 'vw';
-        confettiPiece.style.backgroundColor = ['red', 'white', 'green'][Math.floor(Math.random() * 3)];
+        confettiPiece.style.backgroundColor = ['#ff0000', '#ffffff', '#00ff00'][Math.floor(Math.random() * 3)];
         confettiPiece.style.animationDelay = Math.random() * 5 + 's';
         confettiContainer.appendChild(confettiPiece);
     }
 }
-
-In
