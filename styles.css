@@ -1,13 +1,16 @@
-﻿body {
+﻿html, body {
     margin: 0;
     padding: 0;
-    background: url('skyblue.png') no-repeat center center fixed; /* Cover the background image */
-    background-size: cover; /* Make sure the background image covers the whole page */
+    height: 100%;
+}
+
+body {
+    background: url('skyblue.png') no-repeat center center fixed; /* Center and fix the background image */
+    background-size: cover; /* Cover the entire page */
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
 }
 
 .home-background, .choice-background {
