@@ -1,13 +1,13 @@
 ﻿body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background: url('skyblue.png') no-repeat center center fixed; /* Cover the background image */
+    background-size: cover; /* Make sure the background image covers the whole page */
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-size: cover; /* Make sure background covers the whole screen */
-    background-position: center;
+    height: 100vh; /* Full viewport height */
 }
 
 .home-background, .choice-background {
@@ -37,7 +37,6 @@
     height: 300px;
     margin: 0 auto 20px;
     border: 3px solid #ccc;
-    border-radius: 10px;
     background: #f0f0f0;
     overflow: hidden;
 }
@@ -46,7 +45,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 10px;
         position: absolute;
         top: 0;
         left: 0;
@@ -54,11 +52,11 @@
 
 .puzzle-part {
     position: absolute;
-    background-color: #333; /* Dark grey with full opacity */
-    border: 1px solid white; /* White border */
+    background-color: #333;
+    border: 3px solid white;
     z-index: 1;
-    transition: background-color 0.3s ease; /* Smooth transition for reveal effect */
-    box-sizing: border-box; /* Include border in the element's total width and height */
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
 }
 
 .part1 {
@@ -81,11 +79,6 @@
     transform: translateX(-50%);
     width: 300px;
     height: 150px;
-}
-
-
-#question-container {
-    margin-bottom: 20px;
 }
 
 button {
