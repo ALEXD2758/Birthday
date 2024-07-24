@@ -19,8 +19,7 @@ function selectChoice(choice) {
 }
 
 function startConfetti() {
-    // Define confetti parameters
-    const duration = 5 * 1000; // 5 seconds
+    const duration = 3 * 1000; // 3 seconds
     const animationEnd = Date.now() + duration;
 
     // Confetti from the left side
@@ -31,10 +30,10 @@ function startConfetti() {
         }
         confetti({
             angle: 90,
-            spread: 60,
+            spread: 50,
             origin: { x: 0 }
         });
-    }, 200);
+    }, 100);
 
     // Confetti from the right side
     const intervalRight = setInterval(() => {
@@ -44,34 +43,8 @@ function startConfetti() {
         }
         confetti({
             angle: 270,
-            spread: 60,
+            spread: 50,
             origin: { x: 1 }
         });
-    }, 200);
-
-    // Confetti from the top side
-    const intervalTop = setInterval(() => {
-        if (Date.now() > animationEnd) {
-            clearInterval(intervalTop);
-            return;
-        }
-        confetti({
-            angle: 180,
-            spread: 60,
-            origin: { y: 0 }
-        });
-    }, 200);
-
-    // Confetti from the bottom side
-    const intervalBottom = setInterval(() => {
-        if (Date.now() > animationEnd) {
-            clearInterval(intervalBottom);
-            return;
-        }
-        confetti({
-            angle: 0,
-            spread: 60,
-            origin: { y: 1 }
-        });
-    }, 200);
+    }, 100);
 }

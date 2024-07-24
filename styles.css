@@ -8,38 +8,10 @@
     height: 100vh;
 }
 
-.login-box, .centered-box {
-    border: 2px solid #007BFF;
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    background: white;
+.index-background {
+    background: url('backgroundindexpage.png') no-repeat center center fixed;
+    background-size: cover;
 }
-
-    .login-box input, .login-box button {
-        display: block;
-        width: 90%;
-        margin: 10px auto;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
-
-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 12px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-    button:hover {
-        background-color: #218838;
-    }
 
 .home-background {
     background: linear-gradient(to right, #ff9a9e, #fad0c4);
@@ -58,19 +30,54 @@ button {
         opacity: 0.3;
     }
 
-.centered-box {
-    z-index: 1;
-    border: 2px solid #007BFF;
+.login-box {
+    border: 1px solid #007BFF;
+    border-radius: 15px;
+    padding: 40px;
+    width: 320px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    text-align: center;
+}
+
+    .login-box input, .login-box button {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+    }
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
     border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button:hover {
+        background-color: #218838;
+    }
+
+.centered-box {
+    border: 1px solid #007BFF;
+    border-radius: 15px;
     padding: 30px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    z-index: 1;
 }
 
 .choice-box {
-    border: 2px solid #007BFF;
-    border-radius: 10px;
+    border: 1px solid #007BFF;
+    border-radius: 15px;
     padding: 20px;
     margin: 15px;
     cursor: pointer;
@@ -79,7 +86,7 @@ button {
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: white;
     font-weight: bold;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out;
 }
 
@@ -104,7 +111,7 @@ button {
     height: 10px;
     background-color: red;
     opacity: 0.7;
-    animation: confetti-fall 5s linear infinite, confetti-spin 3s ease-in-out infinite;
+    animation: confetti-fall 3s linear infinite;
 }
 
 @keyframes confetti-fall {
@@ -114,15 +121,5 @@ button {
 
     100% {
         transform: translateY(100vh);
-    }
-}
-
-@keyframes confetti-spin {
-    0%, 100% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(360deg);
     }
 }
