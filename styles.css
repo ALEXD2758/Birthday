@@ -1,0 +1,61 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box, .centered-box {
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .login-box input, .login-box button {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+.home-background {
+    background-color: green;
+    background-image: repeating-linear-gradient(45deg, red, red 10px, white 10px, white 20px);
+}
+
+.choice-box {
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.confetti {
+    display: none;
+}
+
+@keyframes confetti-fall {
+    0% {
+        top: -10%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    animation: confetti-fall 5s linear infinite;
+}
