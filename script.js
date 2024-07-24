@@ -31,9 +31,9 @@ function startConfetti() {
         confetti({
             angle: 90,
             spread: 50,
-            origin: { x: 0 }
+            origin: { x: 0.1 }
         });
-    }, 100);
+    }, 200);
 
     // Confetti from the right side
     const intervalRight = setInterval(() => {
@@ -44,7 +44,7 @@ function startConfetti() {
         confetti({
             angle: 270,
             spread: 50,
-            origin: { x: 1 }
+            origin: { x: 0.9 }
         });
-    }, 100);
+    }, 200);
 }
