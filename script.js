@@ -5,14 +5,15 @@ function checkAnswer() {
     const answer = document.getElementById('answer').value.toLowerCase();
 
     if (answer === answers[currentQuestion]) {
-        document.querySelector(`.part${currentQuestion + 1}`).style.backgroundColor = '#fff'; // Reveal puzzle part
+        document.querySelector(`.part${currentQuestion + 1}`).style.backgroundColor = '#ffffff'; // Reveal puzzle part
         currentQuestion++;
 
         if (currentQuestion < answers.length) {
             document.getElementById('question').innerText = getQuestion(currentQuestion);
             document.getElementById('answer').value = ''; // Clear previous answer
         } else {
-            window.location.href = 'choice.html'; // Redirect to choice page
+            // All questions answered, redirect to choice.html
+            window.location.href = 'choice.html';
         }
     } else {
         alert('Incorrect, try again!');
