@@ -14,22 +14,22 @@
 }
 
 .home-background {
-    background: url('pastelpink.gif') no-repeat center center fixed;
+    background: url('skyblue.png') no-repeat center center fixed;
     background-size: cover;
 }
 
 .choice-background {
-    background: url('pastelpink.gif') no-repeat center center fixed;
+    background: url('skyblue.png') no-repeat center center fixed;
     background-size: cover;
 }
 
 .login-box, .centered-box, .choice-box {
-    border: 1px solid #007BFF;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background: #f5f5f5; /* Light grey background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: #ffffff; /* White background for a clean look */
     text-align: center;
+    position: relative;
 }
 
 .login-box {
@@ -66,7 +66,7 @@ button {
 }
 
 .choice-box {
-    border: 1px solid #007BFF;
+    border: 1px solid #ccc;
     border-radius: 15px;
     padding: 20px;
     margin: 15px;
@@ -76,7 +76,7 @@ button {
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: white;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out;
 }
 

@@ -30,8 +30,10 @@ function startConfetti() {
         }
         confetti({
             angle: 90,
-            spread: 50,
-            origin: { x: 0.1 }
+            spread: 60,
+            origin: { x: 0.1 },
+            particleCount: 10,
+            spread: 70
         });
     }, 200);
 
@@ -43,8 +45,10 @@ function startConfetti() {
         }
         confetti({
             angle: 270,
-            spread: 50,
-            origin: { x: 0.9 }
+            spread: 60,
+            origin: { x: 0.9 },
+            particleCount: 10,
+            spread: 70
         });
     }, 200);
 }
