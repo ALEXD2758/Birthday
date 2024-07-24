@@ -34,7 +34,7 @@ function goToChoice() {
 }
 
 function selectChoice(choice) {
-    document.querySelector('.centered-box').innerHTML = `<h2>You have won: 100€ of ${choice}</h2>`;
+    document.querySelector('.centered-box').innerHTML = `<h2>You have won: 100 euros of ${choice}</h2>`;
     startConfetti();
 }
 
@@ -59,16 +59,3 @@ function startConfetti() {
 
     // Confetti from the right side
     const intervalRight = setInterval(() => {
-        if (Date.now() > animationEnd) {
-            clearInterval(intervalRight);
-            return;
-        }
-        confetti({
-            angle: 270,
-            spread: 60,
-            origin: { x: 0.9 },
-            particleCount: 10,
-            spread: 70
-        });
-    }, 200);
-}
