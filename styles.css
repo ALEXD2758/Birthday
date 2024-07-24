@@ -15,6 +15,11 @@
     background-size: cover;
 }
 
+.choice-background {
+    background: url('pastelpink.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
 .centered-box {
     width: 80%;
     max-width: 600px;
@@ -49,27 +54,27 @@
 
 .puzzle-part {
     position: absolute;
-    background-color: #ccc;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark grey */
     border-radius: 10px;
     z-index: 1;
 }
 
 .part1 {
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 0;
     width: 100px;
     height: 100px;
 }
 
 .part2 {
-    top: 10px;
-    right: 10px;
+    top: 0;
+    right: 0;
     width: 100px;
     height: 100px;
 }
 
 .part3 {
-    bottom: 10px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 200px;
@@ -88,8 +93,27 @@ button {
     padding: 12px;
     cursor: pointer;
     font-size: 16px;
+    margin: 10px 0;
 }
 
     button:hover {
         background-color: #218838;
+    }
+
+.choice-box {
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+    display: inline-block;
+    width: 200px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+    .choice-box:hover {
+        transform: scale(1.05);
     }
