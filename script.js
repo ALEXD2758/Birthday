@@ -47,7 +47,7 @@ function goToChoice() {
 }
 
 function selectChoice(choice) {
-    document.querySelector('.centered-box').innerHTML = `<h2>You have won: 100€ of ${choice}</h2>`;
+    document.querySelector('.centered-box').innerHTML = `<h2>You have won: of ${choice}</h2>`;
     startConfetti();
 }
 
