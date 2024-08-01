@@ -18,9 +18,11 @@ function checkAnswer() {
     const answer = document.getElementById('answer').value.toLowerCase();
 
     if (currentQuestion == 1) {
+        currentQuestion++;
+        document.querySelector(`.part${currentQuestion + 1}`).style.backgroundColor = 'transparent'; // Reveal puzzle part
         document.getElementById('question').innerText = getQuestion(currentQuestion);
         document.getElementById('answer').value = ''; // Clear previous answer
-        currentQuestion++;
+        
         return;
     }
     else if (answer === answers[currentQuestion] && currentQuestion != 1) {
