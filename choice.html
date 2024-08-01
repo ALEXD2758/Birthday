@@ -3,37 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puzzle Game</title>
+    <title>Choice</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Include confetti.js library -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-    <style>
-        /* Style for the success emoji */
-        #success-emoji {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 50px;
-            opacity: 0;
-            transition: opacity 1s ease-out;
-            z-index: 1000;
-        }
-    </style>
 </head>
 <body class="choice-background">
     <div class="centered-box">
-        <h2 id="question">What would you prefer?</h2>
-        <input type="text" id="answer" placeholder="Type your answer">
-        <button onclick="checkAnswer()">Submit</button>
-
+        <h2>What would you prefer?</h2>
         <div class="choice-box" onclick="selectChoice('Beauty products')">Beauty products</div>
-        <div class="choice-box" onclick="selectChoice('Saving for travelling')">Saving for travelling</div>
+        <div class="choice-box" onclick="selectChoice('saving for travelling')">Saving for travelling</div>
     </div>
-
-    <!-- Success emoji div -->
-    <div id="success-emoji">🎉</div>
-
     <script src="script.js"></script>
 </body>
 </html>
