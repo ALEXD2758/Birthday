@@ -80,7 +80,7 @@ function selectChoice(choice) {
 }
 
 function startConfetti() {
-    const duration = 3 * 1000; // 3 seconds
+    const duration = 6 * 1000; // 3 seconds
     const animationEnd = Date.now() + duration;
 
     // Confetti from the left side
@@ -93,7 +93,7 @@ function startConfetti() {
             angle: 90,
             spread: 60,
             origin: { x: 0.1, y: 0.9 },
-            particleCount: 10,
+            particleCount: 20,
             spread: 70
         });
     }, 200);
@@ -108,7 +108,7 @@ function startConfetti() {
             angle: 270,
             spread: 60,
             origin: { x: 0.9, y: 0.1 },
-            particleCount: 10,
+            particleCount: 20,
             spread: 70
         });
     }, 200);
