@@ -17,7 +17,7 @@ function checkAnswer() {
     const answers = ['meditation', 'e', '14/12/2018'];
     const answer = document.getElementById('answer').value.toLowerCase();
 
-    if (currentQuestion = 1) {
+    if (currentQuestion == 1) {
         document.getElementById('question').innerText = getQuestion(currentQuestion);
         document.getElementById('answer').value = ''; // Clear previous answer
         currentQuestion++;
@@ -45,8 +45,8 @@ function checkAnswer() {
 function getQuestion(index) {
     const questions = [
         'What’s your usual birthday tradition ? (answer in 1 word, lower-case)',
-        'What’s one thing you want to achieve by your next birthday ?',
-        'What is the date on which you sent me your first photo ? (format: dd/mm/yyyy'
+        'What is one thing you want to achieve by your next birthday ?',
+        'What is the date on which you sent me your first photo ? (format: dd/mm/yyyy)'
     ];
     return questions[index];
 }
