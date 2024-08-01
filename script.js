@@ -70,10 +70,10 @@ function goToChoice() {
 
 function selectChoice(choice) {
     if (choice == 'saving for travelling') {
-        document.querySelector('.centered-box').innerHTML = `<h2>Congratulations ! You have answered all the questions! You have won 250 euros for a flight ticket of your choice!</h2>`;
+        document.querySelector('.centered-box').innerHTML = `<h3>Congratulations ! You have answered all the questions! You have won 250 euros for a flight ticket of your choice!</h2>`;
     }
     else {
-        document.querySelector('.centered-box').innerHTML = `<h2>Congratulations ! You have answered all the questions! But we don't have beauty products in stock :(. What about 250 euros for a flight ticket of your choice ?</h2>`;
+        document.querySelector('.centered-box').innerHTML = `<h3>Congratulations ! You have answered all the questions! But we don't have beauty products in stock :(. What about 250 euros for a flight ticket of your choice ?</h2>`;
     }
     
     startConfetti();
