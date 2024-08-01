@@ -3,7 +3,7 @@ function login() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    if (username === 'admin' && password === 'admin') {
+    if (username === 'verona' && password === 'vientiane') {
         window.location.href = 'home.html';
     } else {
         alert('Incorrect username or password.');
@@ -14,30 +14,39 @@ function login() {
 let currentQuestion = 0;
 
 function checkAnswer() {
-    const answers = ['t', 'e', 'a'];
+    const answers = ['meditation', 'e', '14/12/2018'];
     const answer = document.getElementById('answer').value.toLowerCase();
 
-    if (answer === answers[currentQuestion]) {
+    if (currentQuestion = 1) {
+        document.getElementById('question').innerText = getQuestion(currentQuestion);
+        document.getElementById('answer').value = ''; // Clear previous answer
+        currentQuestion++;
+        return;
+    }
+    else if (answer === answers[currentQuestion] && currentQuestion != 1) {
         document.querySelector(`.part${currentQuestion + 1}`).style.backgroundColor = 'transparent'; // Reveal puzzle part
         currentQuestion++;
 
         if (currentQuestion < answers.length) {
             document.getElementById('question').innerText = getQuestion(currentQuestion);
             document.getElementById('answer').value = ''; // Clear previous answer
+            return;
         } else {
             // All questions answered, redirect to choice.html
             window.location.href = 'choice.html';
         }
-    } else {
+    }
+    else {
         alert('Incorrect, try again!');
     }
+
 }
 
 function getQuestion(index) {
     const questions = [
-        'What is the first letter of "tut"?',
-        'What is the last letter of "tie"?',
-        'What is the first letter of "alphabet"?'
+        'What’s your usual birthday tradition ? (answer in 1 word, lower-case)',
+        'What’s one thing you want to achieve by your next birthday ?',
+        'What is the date on which you sent me your first photo ? (format: dd/mm/yyyy'
     ];
     return questions[index];
 }
@@ -47,7 +56,13 @@ function goToChoice() {
 }
 
 function selectChoice(choice) {
-    document.querySelector('.centered-box').innerHTML = `<h2>You have won: of ${choice}</h2>`;
+    if (choice == 'saving for travelling') {
+        document.querySelector('.centered-box').innerHTML = `<h2>Congratulations ! You have answered all the questions! You have won 250€ for a flight ticket of your choice!</h2>`;
+    }
+    else {
+        document.querySelector('.centered-box').innerHTML = `<h2>Congratulations ! You have answered all the questions! But we don't have beauty products in stock :(. What about 250€ for a flight ticket of your choice ?</h2>`;
+    }
+    
     startConfetti();
 }
 
@@ -64,7 +79,7 @@ function startConfetti() {
         confetti({
             angle: 90,
             spread: 60,
-            origin: { x: 0.1 },
+            origin: { x: 0.1, y: 0.9 },
             particleCount: 10,
             spread: 70
         });
@@ -79,7 +94,7 @@ function startConfetti() {
         confetti({
             angle: 270,
             spread: 60,
-            origin: { x: 0.9 },
+            origin: { x: 0.9, y: 0.1 },
             particleCount: 10,
             spread: 70
         });
