@@ -13,20 +13,32 @@ function login() {
 // Restore the logic for checking answers in the photo puzzle
 let currentQuestion = 0;
 
+function showSuccessEmoji() {
+    const emoji = document.getElementById('success-emoji');
+    emoji.style.opacity = 1;  // Make the emoji visible
+
+    setTimeout(() => {
+        emoji.style.opacity = 0;  // Fade out after a short delay
+    }, 1000);  // Adjust this delay (in ms) as needed
+}
+
 function checkAnswer() {
     const answers = ['meditation', 'e', '14/12/2018'];
     const answer = document.getElementById('answer').value.toLowerCase();
 
     if (currentQuestion == 1) {
-        currentQuestion++;
         document.querySelector(`.part${currentQuestion + 1}`).style.backgroundColor = 'transparent'; // Reveal puzzle part
+        showSuccessEmoji(); // Show success emoji
+        currentQuestion++;
+
         document.getElementById('question').innerText = getQuestion(currentQuestion);
         document.getElementById('answer').value = ''; // Clear previous answer
-        
+
         return;
     }
     else if (answer === answers[currentQuestion] && currentQuestion != 1) {
         document.querySelector(`.part${currentQuestion + 1}`).style.backgroundColor = 'transparent'; // Reveal puzzle part
+        showSuccessEmoji(); // Show success emoji
         currentQuestion++;
 
         if (currentQuestion < answers.length) {
@@ -41,7 +53,6 @@ function checkAnswer() {
     else {
         alert('Incorrect, try again!');
     }
-
 }
 
 function getQuestion(index) {
